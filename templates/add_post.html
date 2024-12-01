@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Добавить новый пост</h2>
+<form action="{{ url_for('add_post') }}" method="post">
+    <label for="title">Заголовок: </label>
+    <input type="text" name="title" required>
+
+    <label for="content">Содержимое: </label>
+    <textarea name="content" rows="4" required></textarea>
+
+    <button type="submit">Добавить пост</button>
+</form>
+{% endblock %}
